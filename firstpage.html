@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer form</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script>
+            function revealInstructions() {
+                let x = document.getElementById("list");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                  } else {
+                    x.style.display = "none";
+                  };
+                let y = document.getElementById("arrowRight");
+                  if (y.style.display === "block") {
+                    y.style.display = "none";
+                  } else {
+                    y.style.display = "block";
+                  };
+                let z = document.getElementById("arrowUp");
+                  if (z.style.display === "none") {
+                    z.style.display = "block";
+                  } else {
+                    z.style.display = "none";
+                  };
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+        <h1>Customer form</h1>
+        <h2 class="mini-heading" onclick="revealInstructions()">
+            <span id="arrowRight" style="display: block; float: left; margin-right: 10px;">&gt;</span>
+            <span id="arrowUp" style="display: none; float: left; margin-right: 10px;">&lt;</span>
+            Instructions</h2>
+        <ul id="list" style="display: none;">
+            <li>Complete the fields</li>
+            <li>Press the send button</li>
+            <li>It will cost &pound;50</li>
+        </ul>
+
+        <h2 class="mini-heading">Customer Information</h2>
+        <form action="https://some-server123.com/customer" method="get" >
+                <label for="job-title">Job title</label>
+                <select name="jt" id="job-title" required>
+                    <option value="" disabled selected >please select</option>
+                    <option value="trainee">trainee</option>
+                    <option value="professional">professional</option>
+                </select>
+                <br>
+                <label for="customer-name" >Customer name</label>
+                <input type="text" name="custn" id="customer-name">
+                <br>
+                <label for="color">Choose your favourite colour</label>
+                <input type="color" id="color">
+                <br>
+                <label for="birthday">Select your birthday</label>
+                <input type="date" id="birthday">
+                
+                <br>
+                <button type="submit">Send</button>
+        </form> 
+    </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    font-size: 14px;
+    color: #2d2d92;
+    font-family: 'Roboto';
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.mini-heading {
+    text-transform:uppercase;
+}
+
+#customer-name {
+    border: 1px solid #14ac14;
+}
+
+.container {
+    border: 1px solid #ccc;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and  (max-width: 1024px) {
+    .container {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .container {
+        width: 95%;
+    }
+}
+
+button {
+    text-align: right;
+}
+
+button:hover {
+    background-color: red;
+}
+
+label {
+    min-width: 300px;
+    display: inline-block;
+    text-align: right;
+    margin: 10px;
+}

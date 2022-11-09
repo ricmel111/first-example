@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function greetMe() {
+                const nameInput = document.getElementById("name");
+                const resultsDiv = document.getElementById("results");
+                const currentYear = new Date().getFullYear();
+                const yearInput = document.getElementById("year");
+                const age = currentYear - yearInput.value;
+                resultsDiv.innerHTML = `Hello ${nameInput.value} you are probably ${age}`;
+                if (age === 21) {
+                    console.log("you are 21");
+                };
+                if (age !== 21) {
+                    console.log("you are not 21");
+                }
+                if (age == "21") {
+                    console.log("they are the same");
+                }
+
+                const pizza = {
+                    base: "thin",
+                    toppings: ["olives","pineapple"]
+                }
+                pizza.size = '12"';
+                pizza.base = "thick";
+
+                console.log(pizza);
+                
+                // spread operator ... works with lists and objects
+                const pizza2 = {
+                    ...pizza, extraHot : true,
+                    size : '8"'
+                };
+                console.log(pizza2);
+
+                const colours = ["red","green","blue","magenta"];
+                for(let i = 0; i < 4; i++) {
+                    console.log(colours[i]);
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript challenge 1</h1>
+        <p>
+            <label for="name">Name</label>
+            <input id="name" type="text">
+        </p>
+        <p>
+            <label for="year">Year of birth</label>
+            <input id="year" type="number">
+        </p>
+        <p><button onclick="greetMe()">Greet me</button></p>
+        <div id="results"></div>
+    </body>
+</html>
